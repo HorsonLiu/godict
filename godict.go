@@ -85,5 +85,23 @@ func Str(obj interface{}) string {
 			ret += fmt.Sprintf("%s:%s", Str(key.Interface()), Str(val.Interface()))
 		}
 		return fmt.Sprintf("{%s}", ret)
+	case reflect.Int16:
+		return fmt.Sprint(value.Interface().(int16))
+	case reflect.Int32:
+		return fmt.Sprint(value.Interface().(int32))
+	case reflect.Int64:
+		return fmt.Sprint(value.Interface().(int64))
+	case reflect.Int8:
+		return fmt.Sprint(value.Interface().(int8))
+	case reflect.Uint64:
+		return fmt.Sprint(value.Interface().(uint64))
+	case reflect.Uint8:
+		return fmt.Sprint(value.Interface().(uint8))
+	case reflect.Uint16:
+		return fmt.Sprint(value.Interface().(uint16))
+	case reflect.Uint32:
+		return fmt.Sprint(value.Interface().(uint32))
+	case reflect.Uint:
+		return fmt.Sprint(value.Interface().(uint))
 	}
 }
