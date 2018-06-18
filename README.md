@@ -2,7 +2,7 @@
 
 ## Inspired by Dict in Python
 
-前一段时间使用 python，发现 python 的 Dict() 真是一个好东西，使用非常方便，go语言相比而言就显得有些死板，必须要固定 struct 形式才能与 json 字符串互相转换，所以写下来这个 godict 。
+前一段时间使用 python，发现 python 的 dict() 真是一个好东西，使用非常方便，go语言相比而言就显得有些死板，必须要固定 struct 形式才能与 json 字符串互相转换，所以写下来这个 godict 。
 
 ## Wellcome to contribute
 
@@ -15,6 +15,7 @@ package main
 
 import(
 	"fmt"
+	// "github.com/HorsonLiu/godict"
 	"godict"
 	"encoding/json"
 )
@@ -40,6 +41,8 @@ func main() {
 	vSliceString := []string{"wow","hello","bye"}
 	vStruct := TestStruct{}
 	vSliceStruct := [2]TestStruct{}
+	var vUint uint = 99
+	var vUint64 uint64 = 64
 
 	t["A"] =  u
 	t["B"] = &vInt
@@ -52,6 +55,8 @@ func main() {
 	t["I"] = &vSliceString
 	t["J"] = &vStruct
 	t["K"] = &vSliceStruct
+	t["L"] = vUint
+	t["M"] = vUint64
 	
 	u["a"] = vInt
 	u["b"] = vFloat
